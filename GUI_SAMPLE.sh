@@ -5,10 +5,10 @@ login=$(zenity --info --width 400 --height 500 --text="\n\tThis is a Custom Zeni
 
 USR=$(zenity --entry --width 400 --height 200 --title "Username and password" --text "\n\tEnter username: " --ok-label="Proceed"); echo $USR
 
-password=$(zenity --entry --width 400 --height 200 --title "Password" --text "\n\tEnter password" --hide-text); #echo $password
-while [ count -lt 10 ]; do
 
-   if [ $password -eq "zed2408" ]; then
+while [ count -lt 10 ]; do
+   password=$(zenity --entry --width 400 --height 200 --title "Password" --text "\n\tEnter password" --hide-text); #echo $password
+   if [ "$password" == "zed2408" ]; then
     accept=$(zenity --info --width 350 --height 200 --title "Accepted" --text "\n\t Welcome  user!!"); echo $accept
   
    else 
